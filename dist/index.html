@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./refinements.css">
   <link rel="stylesheet" href="./reference-layout.css">
+  <link rel="stylesheet" href="./hero-effects.css">
   <script src="./content.js" defer></script>
   <script src="./app.js?v=20261026-2" defer></script>
 </head>
@@ -27,16 +28,19 @@
   </header>
   <main id="conteudo">
     <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-visual">
       <div class="container hero-grid">
         <div class="hero-story">
           <p class="eyebrow hero-eyebrow"><span class="status-dot" aria-hidden="true"></span> EVENTO GRATUITO PARA EMPRESÁRIOS DE LIMEIRA E REGIÃO</p>
           <p class="event-name">O Lucro Invisível</p>
           <h1 id="hero-title">Para onde vai o dinheiro da sua <em>loja online?</em></h1>
           <p class="hero-description">Entenda o que está consumindo a margem do seu e-commerce e quais decisões podem ajudar a fazer mais dinheiro sobrar.</p>
-          <div class="hero-event-meta"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg><div><time datetime="2026-11-05">5 de novembro de 2026</time><p>Com a Bastelli e Hamilton, da Prexus Contabilidade.</p></div></div>
+          <div class="hero-event-meta"><div class="hero-date-cell"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18M7 15h3M14 15h3"/></svg><time datetime="2026-11-05"><span>5 de novembro</span><span>de 2026</span></time></div><p class="hero-free-cell">Evento<br><strong>gratuito</strong></p></div>
+          <p class="hero-partnership">Com a Bastelli e Hamilton, da Prexus Contabilidade.</p>
           <div class="hero-actions"><a class="button" href="#lista-espera">QUERO ENTRAR NA LISTA DE ESPERA <span aria-hidden="true">↗</span></a><a class="hero-secondary" href="#encontros">Conheça nossos encontros <span aria-hidden="true">↓</span></a></div>
         </div>
         <figure class="bruno-photo hero-portrait"><img src="./assets/bruno-palestra.webp" width="1300" height="1858" alt="Bruno Bastelli palestrando em um evento" fetchpriority="high"><figcaption>Bruno Bastelli <span>Bastelli Consultoria</span></figcaption></figure>
+      </div>
       </div>
       <div class="container registration-wrap">
         <aside class="waitlist hero-registration" id="lista-espera" tabindex="-1" aria-labelledby="waitlist-title">
@@ -64,8 +68,9 @@
     </section>
     <section class="about section-light" id="sobre" aria-labelledby="about-title">
       <div class="container about-grid">
+        <p class="eyebrow about-label"><span class="small-line" aria-hidden="true"></span> QUEM É A BASTELLI</p>
         <figure class="team-photo"><img src="./assets/equipe-bastelli.webp" width="1200" height="1202" alt="Equipe Bastelli reunida" loading="lazy"><figcaption>ESTRATÉGIA SE CONSTRÓI DE PERTO.</figcaption></figure>
-        <div class="about-copy"><p class="eyebrow"><span class="small-line" aria-hidden="true"></span> QUEM É A BASTELLI</p><h2 id="about-title">Especialistas em e-commerce, <em>próximos do seu negócio.</em></h2><p>A Bastelli é uma consultoria especializada em e-commerce. Trabalhamos ao lado dos lojistas, conectando planejamento, marketing e operação para identificar oportunidades e melhorar os resultados de cada negócio.</p><p>Nos nossos encontros, compartilhamos essa experiência com empresários de Limeira e região.</p><a class="text-link" href="#lista-espera">QUERO ENTRAR NA LISTA DE ESPERA <span aria-hidden="true">↗</span></a></div>
+        <div class="about-copy"><h2 id="about-title">Especialistas em e-commerce, <em>próximos do seu negócio.</em></h2><p>A Bastelli é uma consultoria especializada em e-commerce. Trabalhamos ao lado dos lojistas, conectando planejamento, marketing e operação para identificar oportunidades e melhorar os resultados de cada negócio.</p><p>Nos nossos encontros, compartilhamos essa experiência com empresários de Limeira e região.</p><a class="text-link" href="#lista-espera">QUERO ENTRAR NA LISTA DE ESPERA <span aria-hidden="true">↗</span></a></div>
       </div>
     </section>
     <section class="final-cta" aria-labelledby="final-title"><div class="container final-grid"><div><p class="eyebrow">05 NOVEMBRO 2026 · EVENTO GRATUITO</p><h2 id="final-title">Seu próximo encontro com a Bastelli já tem tema: <em>o lucro da sua loja.</em></h2></div><div><p>Entre na lista de espera do evento gratuito O Lucro Invisível e seja avisado quando as inscrições abrirem.</p><a class="button" href="#lista-espera">QUERO ENTRAR NA LISTA DE ESPERA <span aria-hidden="true">↗</span></a></div></div></section>
