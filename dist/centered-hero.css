@@ -27,6 +27,7 @@
 .hero .hero-registration .hero-portrait figcaption span{font-size:9px;margin-top:3px;color:#dce2e8}
 .hero-registration .waitlist-note{font-size:10px;line-height:1.6;margin-top:17px;color:#26323f;max-width:none}
 .hero-registration .iframe-wrap{padding:24px 21px 0;align-self:start;min-width:0}
+.hero .hero-registration .iframe-wrap iframe{height:520px}
 .hero-visual::before{background:radial-gradient(ellipse 70% 40% at 3% 5%,#28607c70,transparent 90%),radial-gradient(ellipse 55% 45% at 100% 28%,#ed6e3c47,transparent 90%),radial-gradient(ellipse 70% 24% at 50% 100%,#83aee14d,transparent 90%);mask-image:none}
 .hero-visual::after{opacity:.075;mask-image:linear-gradient(#000,transparent 90%)}
 .hero-visual .hero-grid::before{inset:-45px -120px -20px;opacity:.22;mask-image:radial-gradient(ellipse,#000,transparent 75%)}

@@ -6,6 +6,8 @@ Prévia local: `node preview.mjs`. Validação: `node verify.mjs`. Regerar pági
 
 O único formulário de cadastro é o iframe fornecido. Não há backend nem confirmação independente. Todos os CTAs de cadastro apontam para `#lista-espera`.
 
+O atributo HTML `height="640"` foi preservado. A altura exibida é ajustada por CSS para 520px, reduzindo a sobra inferior e mantendo a rolagem interna automática disponível para mensagens maiores. Os campos são controlados pelo projeto externo Lovable, cujo componente publicado não oferece tema ou redimensionamento por mensagem; a edição visual dos campos depende do acesso a esse projeto.
+
 ## Materiais
 
 - Foto real de Bruno em palestra, equipe e logo: `wireframe/preview/assets`.
