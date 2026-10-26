@@ -16,8 +16,10 @@
   <link rel="stylesheet" href="./hero-effects.css">
   <link rel="stylesheet" href="./centered-hero.css">
   <link rel="stylesheet" href="./event-dialog.css">
+  <link rel="stylesheet" href="./countdown.css">
   <script src="./content.js" defer></script>
   <script src="./app.js?v=20261026-3" defer></script>
+  <script src="./countdown.mjs" type="module"></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -37,6 +39,16 @@
           <p class="event-name">O Lucro Invisível</p>
           <h1 id="hero-title">Para onde vai o dinheiro da sua <em>loja online?</em></h1>
           <p class="hero-description">Entenda o que está consumindo a margem do seu e-commerce e quais decisões podem ajudar a fazer mais dinheiro sobrar.</p>
+          <div class="event-countdown" id="event-countdown" role="group" aria-labelledby="countdown-headline">
+            <div class="countdown-intro"><p class="countdown-kicker">PRÓXIMO ENCONTRO</p><p class="countdown-headline" id="countdown-headline">O encontro está chegando.</p><p class="countdown-caption" id="countdown-caption">Contagem até <time datetime="2026-11-05">5 de novembro</time></p></div>
+            <div class="countdown-clock" role="timer" aria-live="off" aria-label="Tempo restante até 5 de novembro" hidden>
+              <span class="countdown-summary" data-countdown-summary></span>
+              <div class="countdown-unit" aria-hidden="true"><span class="countdown-number" data-countdown-unit="days">00</span><span class="countdown-unit-label">DIAS</span></div>
+              <div class="countdown-unit" aria-hidden="true"><span class="countdown-number" data-countdown-unit="hours">00</span><span class="countdown-unit-label">HORAS</span></div>
+              <div class="countdown-unit" aria-hidden="true"><span class="countdown-number" data-countdown-unit="minutes">00</span><span class="countdown-unit-label">MIN</span></div>
+              <div class="countdown-unit" aria-hidden="true"><span class="countdown-number" data-countdown-unit="seconds">00</span><span class="countdown-unit-label">SEG</span></div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="container registration-wrap">
