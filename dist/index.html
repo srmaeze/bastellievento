@@ -12,8 +12,9 @@
   <link rel="preload" href="./assets/fonts/onest-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./refinements.css">
+  <link rel="stylesheet" href="./reference-layout.css">
   <script src="./content.js" defer></script>
-  <script src="./app.js" defer></script>
+  <script src="./app.js?v=20261026-2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -30,23 +31,20 @@
         <div class="hero-story">
           <p class="eyebrow hero-eyebrow"><span class="status-dot" aria-hidden="true"></span> EVENTO GRATUITO PARA EMPRESÁRIOS DE LIMEIRA E REGIÃO</p>
           <p class="event-name">O Lucro Invisível</p>
-          <h1 id="hero-title">Para onde vai<br class="desktop-break"> o dinheiro da sua <em>loja online?</em></h1>
+          <h1 id="hero-title">Para onde vai o dinheiro da sua <em>loja online?</em></h1>
           <p class="hero-description">Entenda o que está consumindo a margem do seu e-commerce e quais decisões podem ajudar a fazer mais dinheiro sobrar.</p>
-          <div class="hero-bottom">
-            <figure class="bruno-photo"><img src="./assets/bruno-palestra.webp" width="1300" height="1858" alt="Bruno Bastelli palestrando em um evento" fetchpriority="high"><figcaption>Bruno Bastelli <span>Bastelli Consultoria</span></figcaption></figure>
-            <div class="event-details">
-              <p class="eyebrow">NOSSO PRÓXIMO ENCONTRO</p>
-              <p class="event-date"><span>05</span> NOVEMBRO<br><small>2026</small></p>
-              <div class="partner-line"></div>
-              <p>Com a Bastelli e Hamilton, da Prexus Contabilidade.</p>
-              <span class="free-note"><span aria-hidden="true">↗</span> Conhecimento que aproxima.</span>
-            </div>
-          </div>
+          <div class="hero-event-meta"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg><div><time datetime="2026-11-05">5 de novembro de 2026</time><p>Com a Bastelli e Hamilton, da Prexus Contabilidade.</p></div></div>
+          <div class="hero-actions"><a class="button" href="#lista-espera">QUERO ENTRAR NA LISTA DE ESPERA <span aria-hidden="true">↗</span></a><a class="hero-secondary" href="#encontros">Conheça nossos encontros <span aria-hidden="true">↓</span></a></div>
         </div>
-        <aside class="waitlist" id="lista-espera" tabindex="-1" aria-labelledby="waitlist-title">
+        <figure class="bruno-photo hero-portrait"><img src="./assets/bruno-palestra.webp" width="1300" height="1858" alt="Bruno Bastelli palestrando em um evento" fetchpriority="high"><figcaption>Bruno Bastelli <span>Bastelli Consultoria</span></figcaption></figure>
+      </div>
+      <div class="container registration-wrap">
+        <aside class="waitlist hero-registration" id="lista-espera" tabindex="-1" aria-labelledby="waitlist-title">
+          <div class="waitlist-copy">
           <div class="waitlist-intro"><p class="eyebrow"><span class="small-line" aria-hidden="true"></span> LISTA DE ESPERA</p><h2 id="waitlist-title">O próximo encontro<br>começa por aqui.</h2><p>Cadastre-se na lista de espera do nosso próximo evento gratuito e receba os detalhes para participar.</p></div>
-          <div class="iframe-wrap"><iframe src="https://bc-contentadmin.lovable.app/lista-espera" width="100%" height="640" style="border:0;max-width:520px;" title="Lista de espera" loading="lazy"></iframe></div>
           <p class="waitlist-note"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Você será avisado quando as inscrições abrirem.</p>
+          </div>
+          <div class="iframe-wrap"><iframe src="https://bc-contentadmin.lovable.app/lista-espera" width="100%" height="640" style="border:0;max-width:520px;" title="Lista de espera" loading="lazy"></iframe></div>
         </aside>
       </div>
       <div class="container hero-footer"><span>CONVERSAS REAIS. DECISÕES MELHORES.</span><a href="#encontros">Conheça os encontros Bastelli <span aria-hidden="true">↓</span></a></div>

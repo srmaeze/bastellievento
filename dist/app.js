@@ -15,7 +15,15 @@
   };
   const eventsGrid = document.getElementById('events-grid');
   content.events.forEach(event => {
-    const card = el('article','event-card');
+    const card = el('article','event-card event-banner');
+    const date = el('div','banner-date');
+    const time = el('time');
+    time.dateTime = event.date;
+    const [day,month,year] = event.displayDate.split(' ');
+    time.append(el('span','banner-day',day),el('span','banner-month',month),el('span','banner-year',year));
+    date.append(time);
+    const details = el('div','banner-content');
+    details.append(el('span','event-tag','Finalizado'));
     const cover = event.pageUrl ? createLink(event.pageUrl,'event-cover') : el('div','event-cover');
     if (event.pageUrl) cover.setAttribute('aria-label',`Ver evento: ${event.title}`);
     if (event.thumbnail) {
@@ -29,33 +37,26 @@
     } else {
       // Tratamento tipográfico neutro, sem apresentar fotos de outros encontros
       // como se fossem a miniatura de um vídeo ainda não identificado.
-      const graphic = el('div','cover-unavailable');
+      const graphic = el('div','banner-art');
       graphic.setAttribute('aria-hidden','true');
-      const brand = el('span',null);
-      brand.append(document.createTextNode('Encontros'),document.createElement('br'),document.createTextNode('Bastelli.'));
-      graphic.append(brand,el('span',null,event.displayDate));
       cover.append(graphic);
     }
-    cover.append(el('span','event-tag','Finalizado'));
-    const meta = el('p','event-meta');
-    const time = el('time',null,event.displayDate);
-    time.dateTime = event.date;
-    meta.append(time);
     const title = el('h3');
     if (event.pageUrl) {
       const link = createLink(event.pageUrl);
       link.textContent = event.title;
       title.append(link);
     } else title.textContent = event.title;
-    card.append(cover,meta,title);
-    card.append(el('p','event-extra',event.extra || '\u00a0'));
+    details.append(title);
+    if (event.extra) details.append(el('p','event-extra',event.extra));
     if (event.pageUrl) {
       const link = createLink(event.pageUrl,'event-link');
       link.append(document.createTextNode('Ver evento'),el('span',null,'↗'));
       link.lastChild.setAttribute('aria-hidden','true');
       link.setAttribute('aria-label',`Ver evento: ${event.title}`);
-      card.append(link);
+      details.append(link);
     }
+    card.append(date,details,cover);
     eventsGrid.append(card);
   });
 
