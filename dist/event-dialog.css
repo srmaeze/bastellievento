@@ -1,0 +1,19 @@
+.events .event-tag::before,.banner-art::before,.banner-art::after{content:none;display:none}
+.events .event-tag{gap:0}
+.about .team-photo img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
+.about .team-photo figcaption{position:static;inset:auto;background:transparent;color:var(--muted);padding:0;margin-top:13px;font-size:9px;line-height:1.6;letter-spacing:.08em}
+html:has(.event-dialog[open]),body:has(.event-dialog[open]){overflow:hidden;overscroll-behavior:none}
+.event-dialog{width:min(580px,calc(100vw - 32px));max-width:calc(100vw - 32px);max-height:calc(100dvh - 36px);margin:auto;padding:0;background:var(--navy);color:#fff;border:1px solid #ffffff2e;border-radius:17px;box-shadow:0 20px 90px #0008;overflow:auto}
+.event-dialog::backdrop{background:#07101be6}
+.event-dialog-header{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;padding:24px;background:var(--navy)}
+.event-dialog-header>div{min-width:0}
+.event-dialog-header .eyebrow{font-size:9px;color:var(--orange-light);letter-spacing:.12em}
+.event-dialog-header h2{font-size:27px;line-height:1.16;letter-spacing:-.035em;margin-top:10px;font-weight:600}
+.event-dialog-meta{font-size:11px;line-height:1.6;color:#b7c4d2;margin-top:11px}
+.event-dialog-close{display:grid;place-items:center;flex-shrink:0;width:44px;height:44px;padding:9px;border:1px solid #ffffff45;border-radius:6px;color:#fff;background:transparent}
+.event-dialog-close svg{width:22px;height:22px}
+.event-dialog-close:hover{background:#ffffff12;border-color:#ffffff85}
+.event-dialog-body{padding:0 24px 24px}
+.event-dialog-body video{display:block;width:100%;height:min(62dvh,620px);max-height:620px;background:#07101b;object-fit:contain;border-radius:8px}
+.event-dialog-body video:focus-visible{outline:3px solid var(--blue);outline-offset:-4px}
+@media(max-width:600px){.event-dialog{width:calc(100vw - 24px);max-width:calc(100vw - 24px);max-height:calc(100dvh - 24px);border-radius:13px}.event-dialog-header{padding:19px;gap:15px}.event-dialog-header h2{font-size:22px;margin-top:9px}.event-dialog-header .eyebrow{font-size:8px}.event-dialog-meta{font-size:10px;margin-top:9px}.event-dialog-close{width:42px;height:42px}.event-dialog-body{padding:0 14px 14px}.event-dialog-body video{height:61dvh;border-radius:6px}.about .team-photo figcaption{font-size:8px;margin-top:11px}}

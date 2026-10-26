@@ -13,6 +13,45 @@
     link.href = url;
     return link;
   };
+  const eventDialog = document.getElementById('event-dialog');
+  const eventDialogVideo = document.getElementById('event-dialog-video');
+  let eventDialogTrigger = null;
+  if (eventDialog && eventDialogVideo) {
+    eventDialog.querySelector('.event-dialog-close').addEventListener('click',() => eventDialog.close());
+    eventDialog.addEventListener('click',event => {
+      if (event.target !== eventDialog) return;
+      const bounds = eventDialog.getBoundingClientRect();
+      if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) eventDialog.close();
+    });
+    eventDialog.addEventListener('close',() => {
+      eventDialogVideo.pause();
+      eventDialogVideo.removeAttribute('src');
+      eventDialogVideo.removeAttribute('poster');
+      eventDialogVideo.load();
+      const trigger = eventDialogTrigger;
+      eventDialogTrigger = null;
+      if (trigger?.isConnected) trigger.focus({preventScroll:true});
+    });
+  }
+  const configureEventLink = (link,event) => {
+    if (!event.videoUrl || !eventDialog || !eventDialogVideo || typeof eventDialog.showModal !== 'function') return link;
+    link.setAttribute('aria-haspopup','dialog');
+    link.setAttribute('aria-controls','event-dialog');
+    link.dataset.eventVideo = event.date;
+    link.addEventListener('click',click => {
+      // Preserve navigation for modified clicks and the real event-page fallback.
+      if (click.button !== 0 || click.metaKey || click.ctrlKey || click.shiftKey || click.altKey) return;
+      click.preventDefault();
+      document.getElementById('event-dialog-title').textContent = event.title;
+      document.getElementById('event-dialog-meta').textContent = [event.displayDate,event.extra].filter(Boolean).join(' · ');
+      eventDialogVideo.poster = event.thumbnail || '';
+      eventDialogVideo.src = event.videoUrl;
+      eventDialogVideo.load();
+      eventDialogTrigger = link;
+      if (!eventDialog.open) eventDialog.showModal();
+    });
+    return link;
+  };
   const eventsGrid = document.getElementById('events-grid');
   content.events.forEach(event => {
     const card = el('article','event-card event-banner');
@@ -24,8 +63,8 @@
     date.append(time);
     const details = el('div','banner-content');
     details.append(el('span','event-tag','Finalizado'));
-    const cover = event.pageUrl ? createLink(event.pageUrl,'event-cover') : el('div','event-cover');
-    if (event.pageUrl) cover.setAttribute('aria-label',`Ver evento: ${event.title}`);
+    const cover = event.pageUrl ? configureEventLink(createLink(event.pageUrl,'event-cover'),event) : el('div','event-cover');
+    if (event.pageUrl) cover.setAttribute('aria-label',`Veja como foi: ${event.title}`);
     if (event.thumbnail) {
       const img = el('img');
       img.src = event.thumbnail;
@@ -43,17 +82,17 @@
     }
     const title = el('h3');
     if (event.pageUrl) {
-      const link = createLink(event.pageUrl);
+      const link = configureEventLink(createLink(event.pageUrl),event);
       link.textContent = event.title;
       title.append(link);
     } else title.textContent = event.title;
     details.append(title);
     if (event.extra) details.append(el('p','event-extra',event.extra));
     if (event.pageUrl) {
-      const link = createLink(event.pageUrl,'event-link');
-      link.append(document.createTextNode('Ver evento'),el('span',null,'↗'));
+      const link = configureEventLink(createLink(event.pageUrl,'event-link'),event);
+      link.append(document.createTextNode('Veja como foi'),el('span',null,'↗'));
       link.lastChild.setAttribute('aria-hidden','true');
-      link.setAttribute('aria-label',`Ver evento: ${event.title}`);
+      link.setAttribute('aria-label',`Veja como foi: ${event.title}`);
       details.append(link);
     }
     card.append(date,details,cover);

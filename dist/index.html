@@ -15,8 +15,9 @@
   <link rel="stylesheet" href="./reference-layout.css">
   <link rel="stylesheet" href="./hero-effects.css">
   <link rel="stylesheet" href="./centered-hero.css">
+  <link rel="stylesheet" href="./event-dialog.css">
   <script src="./content.js" defer></script>
-  <script src="./app.js?v=20261026-2" defer></script>
+  <script src="./app.js?v=20261026-3" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -32,7 +33,7 @@
       <div class="hero-visual">
       <div class="container hero-grid">
         <div class="hero-story">
-          <p class="eyebrow hero-eyebrow"><span class="status-dot" aria-hidden="true"></span> EVENTO GRATUITO PARA EMPRESÁRIOS DE LIMEIRA E REGIÃO</p>
+          <p class="eyebrow hero-eyebrow">EVENTO GRATUITO PARA EMPRESÁRIOS DE LIMEIRA E REGIÃO</p>
           <p class="event-name">O Lucro Invisível</p>
           <h1 id="hero-title">Para onde vai o dinheiro da sua <em>loja online?</em></h1>
           <p class="hero-description">Entenda o que está consumindo a margem do seu e-commerce e quais decisões podem ajudar a fazer mais dinheiro sobrar.</p>
@@ -69,12 +70,16 @@
     <section class="about section-light" id="sobre" aria-labelledby="about-title">
       <div class="container about-grid">
         <p class="eyebrow about-label"><span class="small-line" aria-hidden="true"></span> QUEM É A BASTELLI</p>
-        <figure class="team-photo"><img src="./assets/equipe-bastelli.webp" width="1200" height="1202" alt="Equipe Bastelli reunida" loading="lazy"><figcaption>ESTRATÉGIA SE CONSTRÓI DE PERTO.</figcaption></figure>
+        <figure class="team-photo"><img src="./assets/equipe-bastelli-marca.jpg" width="1701" height="1704" alt="Participantes reunidos na Bastelli em foto com a identidade da marca" loading="lazy"><figcaption>ESTRATÉGIA SE CONSTRÓI DE PERTO.</figcaption></figure>
         <div class="about-copy"><h2 id="about-title">Especialistas em e-commerce, <em>próximos do seu negócio.</em></h2><p>A Bastelli é uma consultoria especializada em e-commerce. Trabalhamos ao lado dos lojistas, conectando planejamento, marketing e operação para identificar oportunidades e melhorar os resultados de cada negócio.</p><p>Nos nossos encontros, compartilhamos essa experiência com empresários de Limeira e região.</p><a class="text-link" href="#lista-espera">QUERO ENTRAR NA LISTA DE ESPERA <span aria-hidden="true">↗</span></a></div>
       </div>
     </section>
     <section class="final-cta" aria-labelledby="final-title"><div class="container final-grid"><div><p class="eyebrow">05 NOVEMBRO 2026 · EVENTO GRATUITO</p><h2 id="final-title">Seu próximo encontro com a Bastelli já tem tema: <em>o lucro da sua loja.</em></h2></div><div><p>Entre na lista de espera do evento gratuito O Lucro Invisível e seja avisado quando as inscrições abrirem.</p><a class="button" href="#lista-espera">QUERO ENTRAR NA LISTA DE ESPERA <span aria-hidden="true">↗</span></a></div></div></section>
   </main>
+  <dialog class="event-dialog" id="event-dialog" aria-labelledby="event-dialog-title" aria-describedby="event-dialog-meta">
+    <div class="event-dialog-header"><div><p class="eyebrow">ENCONTROS BASTELLI</p><h2 id="event-dialog-title"></h2><p id="event-dialog-meta" class="event-dialog-meta"></p></div><button type="button" class="event-dialog-close" aria-label="Fechar vídeo" autofocus><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
+    <div class="event-dialog-body"><video id="event-dialog-video" aria-label="Registro do encontro" controls playsinline preload="metadata"></video></div>
+  </dialog>
   <footer class="footer"><div class="container footer-inner"><a class="brand" href="#conteudo" aria-label="Bastelli, voltar ao início"><img src="./assets/bastelli-logo.png" width="3417" height="392" alt="Bastelli" loading="lazy"></a><span>Consultoria especializada em e-commerce.</span><span>© 2026 Bastelli.</span></div></footer>
   <noscript><p class="noscript-note">Ative o JavaScript para visualizar os registros dos encontros e os depoimentos. O formulário da lista de espera continua disponível acima.</p></noscript>
 </body>
