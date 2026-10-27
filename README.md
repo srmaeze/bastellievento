@@ -23,9 +23,9 @@ O atributo HTML `height="640"` foi preservado. A altura exibida é ajustada por 
 
 ## Pendências reais
 
-- BW Talks no Espaço N7 (06/10/2026): vídeo/capa e URL da página.
+- BW Talks (06/10/2026): vídeo/capa e URL da página.
 - Treinamento Black Friday Presencial (24/09/2026): vídeo/capa do próprio encontro.
 - Treinamento Black Friday Online (17/09/2026): vídeo/capa e URL da página do encontro exclusivo. A página do treinamento gravado não foi associada a essa data.
-- `evento descomplica.mp4`: nome e data do encontro para incluí-lo corretamente. O vídeo mostra um encontro na Bastelli; não há indicação verificável de que seja BW Talks no N7.
+- `evento descomplica.mp4`: nome e data do encontro para incluí-lo corretamente. O vídeo mostra um encontro na Bastelli; o registro ainda precisa ser associado a uma data e tema confirmados.
 
 Cards com capas ausentes usam composição tipográfica neutra. Nenhuma foto de outro encontro foi apresentada como capa de um vídeo. Cards sem destino confirmado não geram link.
