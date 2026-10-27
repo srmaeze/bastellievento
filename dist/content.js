@@ -2,8 +2,8 @@
 // Só preencher pageUrl e thumbnail com destinos e capas reais do respectivo evento.
 window.BASTELLI_CONTENT = {
   events: [
-    {title:'BW Talks',date:'2026-10-06',displayDate:'06 OUT 2026',extra:null,pageUrl:null,thumbnail:null,videoUrl:null},
-    {title:'Treinamento Black Friday Presencial',date:'2026-09-24',displayDate:'24 SET 2026',extra:'Com o time Bastelli.',pageUrl:'https://suablacklucrativa.bastelliconsultoria.com.br/',thumbnail:null,videoUrl:null},
+    {title:'BW Talks',date:'2026-10-06',displayDate:'06 OUT 2026',extra:null,pageUrl:'./eventos/bw-talks.html',thumbnail:'./assets/event-bw-talks.jpg',videoUrl:'./assets/event-bw-talks.mp4'},
+    {title:'Treinamento Black Friday Presencial',date:'2026-09-24',displayDate:'24 SET 2026',extra:'Com o time Bastelli.',pageUrl:'./eventos/black-friday-presencial.html',thumbnail:'./assets/event-black-friday-presencial.jpg',videoUrl:'./assets/event-black-friday-presencial.mp4'},
     {title:'Treinamento Black Friday Online',date:'2026-09-17',displayDate:'17 SET 2026',extra:'Encontro exclusivo para clientes Bastelli.',pageUrl:null,thumbnail:null,videoUrl:null},
     {title:'Marca que Atrai, Marketing que Converte',date:'2026-09-03',displayDate:'03 SET 2026',extra:'Apêbrands.',pageUrl:'./eventos/marca-que-atrai.html',thumbnail:'./assets/event-apebrands.jpg',videoUrl:'./assets/event-apebrands.mp4'},
     {title:'Da Atração à Conversão',date:'2026-08-26',displayDate:'26 AGO 2026',extra:'Transforma Negócios.',pageUrl:'./eventos/da-atracao-a-conversao.html',thumbnail:'./assets/event-transforma.jpg',videoUrl:'./assets/event-transforma.mp4'},
