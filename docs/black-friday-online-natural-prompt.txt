@@ -1,0 +1,14 @@
+Tool: image_gen.imagegen — built-in edit mode (no CLI fallback).
+Reference: C:/Users/baste/Documents/ChatGPT/bastelli/lucro-invisivel/dist/assets/event-black-friday-online-illustration.png
+Output role: illustrative fictional workshop scene, not a record of an actual event.
+
+Use case: identity-preserve
+Asset type: a replacement illustrative event-card cover for an online business workshop.
+Edit target: the supplied image of a laptop with a large posed video-call grid. Preserve only the concept of an online workshop on a computer. Replace the composition, meeting layout, and all participants; do not preserve the people or their identities from the input.
+Primary request: make the result feel like a spontaneous documentary photograph taken during a real ordinary remote meeting, rather than a polished stock-photo mockup.
+Scene: a simple lived-in home office, an ordinary black monitor or laptop viewed slightly from the side and a little over a seated user's shoulder. The monitor screen occupies almost the entire canvas, clearly concentrated in the upper and central area. Only restrained edges of the desk and a soft indistinct shoulder may enter the image.
+Screen: a generic video conference in use. A shared spreadsheet with thin rows, columns, and a modest chart fills about 70 percent of the screen. A narrow strip at the right or bottom contains three small participant tiles: two very small indistinct webcam views of fictional adults with different casual poses and imperfect lighting, plus one neutral camera-off tile. No one is posing for the camera or smiling for a headshot. Webcam faces are small, soft, ordinary, not the visual focus. Do not reproduce any real speaker or any face from the reference.
+Composition: landscape 3:2, approximately 1536 by 1024. Slight imperfect handheld camera alignment, believable screen perspective, screen-share content centered and high enough to remain useful in an event-card crop around 50 percent horizontal and 24 percent vertical.
+Look: natural documentary smartphone photograph, understated and credible, mild screen glare, moderate focus, a little realistic sensor grain, uneven daylight and ordinary room light. Neutral real-world colors, basic dark navy meeting interface. No orange filter, no cinematic color grading, no glossy showroom styling, no fake bokeh halos.
+Text: no legible names, dates, brands, slogans, large text, chat messages, personal data, or watermarks. Spreadsheet contents are tiny and naturally unreadable at this camera distance, without prominent gibberish lettering.
+Constraints: it remains an illustrative fictional scene, not a claimed record of an actual event. Avoid posed stock-photo faces, duplicate people, giant headshot grids, identical offices, malformed anatomy, glossy mockups, futuristic graphics, decorative orbs, dramatic neon, and Google or Bastelli logos. Opaque background.

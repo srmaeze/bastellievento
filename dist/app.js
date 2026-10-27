@@ -116,10 +116,23 @@
     const play = el('span','video-play');
     play.setAttribute('aria-hidden','true');
     play.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5 20 12 7 19.5z"/></svg>';
-    const number = el('span','video-number',String(index+1).padStart(2,'0')+' / 05');
+    const number = el('span','video-number',String(index+1).padStart(2,'0')+' / '+String(content.testimonials.length).padStart(2,'0'));
     number.setAttribute('aria-hidden','true');
     button.append(image,play,number);
     button.addEventListener('click',() => {
+      if (video.videoUrl) {
+        const player = el('video');
+        player.controls = true;
+        player.playsInline = true;
+        player.preload = 'metadata';
+        player.poster = video.thumbnail;
+        player.src = video.videoUrl;
+        player.tabIndex = 0;
+        player.setAttribute('aria-label',`Depoimento ${index+1}: ${video.label}`);
+        stage.replaceChildren(player);
+        player.focus();
+        return;
+      }
       const frame = el('iframe');
       frame.src = `https://player.vimeo.com/video/${video.id}?autoplay=0&controls=1&playsinline=1&dnt=1`;
       frame.title = `Vídeo ${index+1}: ${video.label}`;
@@ -130,11 +143,11 @@
     },{once:true});
     stage.append(button);
     const caption = el('figcaption','testimonial-caption');
-    const link = createLink(`https://vimeo.com/${video.id}`);
+    const link = createLink(video.videoUrl || `https://vimeo.com/${video.id}`);
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
     link.textContent = video.label;
-    link.setAttribute('aria-label',`${video.label}: abrir vídeo ${index+1} no Vimeo, nova aba`);
+    link.setAttribute('aria-label',`${video.label}: abrir vídeo ${index+1}${video.videoUrl ? '' : ' no Vimeo'}, nova aba`);
     const arrow = el('span',null,'↗');
     arrow.setAttribute('aria-hidden','true');
     caption.append(link,arrow);
