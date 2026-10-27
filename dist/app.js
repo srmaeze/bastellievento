@@ -68,7 +68,7 @@
     if (event.thumbnail) {
       const img = el('img');
       img.src = event.thumbnail;
-      img.alt = `Capa do vídeo de ${event.title}`;
+      img.alt = event.thumbnailAlt || (event.videoUrl ? `Capa do vídeo de ${event.title}` : `Imagem de ${event.title}`);
       img.loading = 'lazy';
       img.width = 640;
       img.height = 400;
@@ -88,6 +88,7 @@
     } else title.textContent = event.title;
     details.append(title);
     if (event.extra) details.append(el('p','event-extra',event.extra));
+    if (event.thumbnailCaption) details.append(el('span','event-image-credit',event.thumbnailCaption));
     if (event.pageUrl) {
       const link = configureEventLink(createLink(event.pageUrl,'event-link'),event);
       link.append(document.createTextNode('Veja como foi'),el('span',null,'↗'));

@@ -23,10 +23,11 @@ O atributo HTML `height="640"` foi preservado. A altura exibida é ajustada por 
 - Vídeos dos encontros Infinita, Transforma, Apêbrands, Black Friday Presencial e BW Talks: arquivos enviados pelo usuário em Downloads. Cópias H.264/AAC com faststart; streams originais preservados. Capas extraídas dos próprios vídeos. Páginas reais criadas em `dist/eventos` para esses registros.
 - BW Talks: `bwdaytalk.mp4`, registro de 34,20 s; capa no início com o painel BW Talks/Bastelli.
 - Black Friday Presencial: `black friday presencial.mp4`, registro de 85,65 s; capa aos 4 s com a identidade original do treinamento. Página original do treinamento: `https://suablacklucrativa.bastelliconsultoria.com.br/`.
+- Black Friday Online: capa ilustrativa de videoconferência gerada para o card, com identificação visível de imagem ilustrativa; não representa uma captura do encontro.
 
 ## Pendências reais
 
-- Treinamento Black Friday Online (17/09/2026): vídeo/capa e URL da página do encontro exclusivo. A página do treinamento gravado não foi associada a essa data.
+- Treinamento Black Friday Online (17/09/2026): vídeo e URL da página do encontro exclusivo. A capa ilustrativa já está disponível; a página do treinamento gravado não foi associada a essa data.
 - `evento descomplica.mp4`: nome e data do encontro para incluí-lo corretamente. O vídeo mostra um encontro na Bastelli; o registro ainda precisa ser associado a uma data e tema confirmados.
 
 Cards com capas ausentes usam composição tipográfica neutra. Nenhuma foto de outro encontro foi apresentada como capa de um vídeo. Cards sem destino confirmado não geram link.
