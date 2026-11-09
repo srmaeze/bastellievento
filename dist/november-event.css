@@ -2,6 +2,14 @@
 .hero h1{max-width:1020px;font-size:clamp(38px,4.05vw,56px)}
 .hero .hero-description{max-width:740px}
 .hero .hero-grid{max-width:1100px}
+.hero-presenters{display:grid;grid-template-columns:1fr 1fr;gap:34px;max-width:650px;margin:28px auto 0}
+.hero-presenter{display:flex;align-items:center;gap:18px;text-align:left;min-width:0}
+.hero-presenter img{width:128px;height:128px;flex-shrink:0;object-fit:cover;border:1px solid #ffffff30;border-radius:18px}
+.hero-presenter:nth-child(2) img{object-position:50% 24%}
+.hero-presenter figcaption{line-height:1.4;min-width:0}
+.hero-presenter strong{display:block;font-size:21px;font-weight:600;letter-spacing:-.035em;color:#fff}
+.hero-presenter figcaption span{display:block;margin-top:6px;font-size:10px;letter-spacing:.04em;color:#c5d1df}
+@media(max-width:600px){.hero-presenters{gap:18px;max-width:350px;margin-top:25px}.hero-presenter{flex-direction:column;gap:11px;text-align:center}.hero-presenter img{width:112px;height:112px;border-radius:15px}.hero-presenter strong{font-size:17px}.hero-presenter figcaption span{font-size:9px;margin-top:4px}}
 .hero-registration .event-location{margin-top:19px;padding-top:18px;border-top:1px solid #131f2f40;font-size:12px;line-height:1.7}
 .event-location-name{font-size:14px;font-weight:650;letter-spacing:-.015em}
 .event-location address{font-style:normal;margin-top:4px;color:#26323f}
