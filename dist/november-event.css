@@ -2,14 +2,8 @@
 .hero h1{max-width:1020px;font-size:clamp(38px,4.05vw,56px)}
 .hero .hero-description{max-width:740px}
 .hero .hero-grid{max-width:1100px}
-.registration-portraits{display:grid;grid-template-columns:1fr 1fr;gap:3px;height:180px;border-radius:13px;overflow:hidden;margin-top:18px;background:var(--navy)}
-.registration-portrait{position:relative;min-width:0;height:100%;overflow:hidden}
-.registration-portrait img{display:block;width:100%;height:100%;object-fit:cover}
-.registration-portrait:nth-child(2) img{object-position:50% 24%}
-.registration-portrait::after{content:'';position:absolute;inset:45% 0 0;background:linear-gradient(transparent,#09121deb);pointer-events:none}
-.registration-portrait figcaption{position:absolute;z-index:1;left:13px;right:8px;bottom:13px;line-height:1.4;color:#fff}
-.registration-portrait strong{display:block;font-size:14px;font-weight:600;letter-spacing:-.025em}
-.registration-portrait figcaption span{display:block;margin-top:3px;font-size:8px;color:#e1e6ed}
+.registration-event-art{position:relative;aspect-ratio:1080/560;width:100%;overflow:hidden;border-radius:13px;margin-top:18px;background:var(--navy)}
+.registration-event-art img{display:block;position:absolute;top:0;left:0;width:100%;height:auto;max-width:none;transform:translateY(-39.63%)}
 .registration-context{display:flex;align-items:center;justify-content:space-between;gap:35px;max-width:1080px;margin:24px auto 0;padding-top:22px;border-top:1px solid #ffffff24;color:#e4ebf4}
 .registration-context .event-location{font-size:11px;line-height:1.7}
 .registration-context .event-location address{color:#b7c5d6}
@@ -17,7 +11,7 @@
 .registration-context .event-location a:focus-visible{outline-color:var(--blue)}
 .registration-context .event-hospitality{font-size:13px;font-weight:500;margin:0}
 .registration-context .event-hospitality span{display:block;margin-top:6px;font-size:11px;font-weight:400;color:#b7c5d6;max-width:330px}
-@media(max-width:600px){.registration-portraits{height:180px;margin-top:16px}.registration-portrait figcaption{left:11px;bottom:12px}.registration-portrait strong{font-size:13px}.registration-context{display:block;margin-top:22px;padding-top:19px}.registration-context .event-hospitality{margin-top:17px;font-size:12px}.registration-context .event-hospitality span{font-size:10px}}
+@media(max-width:600px){.registration-event-art{margin-top:16px}.registration-context{display:block;margin-top:22px;padding-top:19px}.registration-context .event-hospitality{margin-top:17px;font-size:12px}.registration-context .event-hospitality span{font-size:10px}}
 .event-location-name{font-size:14px;font-weight:650;letter-spacing:-.015em}
 .event-location address{font-style:normal;margin-top:4px;color:#26323f}
 .event-location a{display:inline-flex;gap:14px;align-items:center;padding:5px 0;margin-top:4px;font-size:11px;font-weight:650;text-underline-offset:4px}
