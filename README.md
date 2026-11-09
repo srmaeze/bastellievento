@@ -1,8 +1,10 @@
-# O Lucro Invisível — Bastelli
+# Encontros Bastelli
 
 Landing page estática. HTML/CSS/JS e fontes locais reaproveitados da identidade de `wireframe/preview`. Os dados dos encontros e depoimentos ficam em `dist/content.js`.
 
-Prévia local: `node preview.mjs`. Validação: `node verify.mjs` e `node verify-pixel.mjs`. Regerar páginas dos encontros após editar os dados: `node build-event-pages.mjs`.
+Próximo encontro: **Gestão de tempo e vendas**, com Léo Nicoletto (Resolve) e Bruno Bastelli, **18/11/2026 às 14h**, no escritório da Bastelli — Rua Santa Cruz, 787, Sala 21 (2º andar), Centro, Limeira/SP. Evento gratuito, com coffee break e networking; vagas limitadas. Informações fornecidas pelo usuário em 09/11/2026. A contagem considera o início confirmado no fuso de Brasília. O cadastro atual foi preservado; a equipe confirma a participação pelo WhatsApp.
+
+Prévia local: `node preview.mjs`. Validação: `node verify.mjs`, `node verify-countdown.mjs` e `node verify-pixel.mjs`. Regerar páginas dos encontros após editar os dados: `node build-event-pages.mjs`. Os dados do próximo encontro usados nos rodapés das páginas de vídeos ficam em `upcoming` no `dist/content.js`.
 
 ## Publicação pela Vercel
 
@@ -26,6 +28,8 @@ O atributo HTML `height="640"` foi preservado. A altura exibida é ajustada por 
 - Black Friday Online: capa ilustrativa de videoconferência gerada para o card, com identificação visível de imagem ilustrativa; não representa uma captura do encontro.
 - Descomplica: primeiro card, em 22/10/2026 conforme informado pelo usuário; título neutro “Encontro com a Descomplica”, vídeo original `evento descomplica.mp4` e capa `descomplica.png`. Não é o Black Friday Presencial.
 - Capas Descomplica, Apêbrands, BW Talks, Infinita e Transforma: imagens enviadas pelo usuário, copiadas sem alteração.
+- O Lucro Invisível (05/11/2026): movido para o primeiro card do histórico, identificado como finalizado. Usa a arte anterior com Hamilton Alves e Bruno Bastelli; nenhum vídeo novo foi fornecido, portanto não há CTA de gravação.
+- Léo Nicoletto: miniatura real do perfil público indicado pelo usuário, `https://www.instagram.com/leonicoletto/`, copiada sem alteração em `dist/assets/leo-nicoletto.jpg` (150×150). A foto pequena é usada apenas para identificar o palestrante. Bruno usa a foto real já existente.
 - Nova capa Black Friday Online: `dist/assets/event-black-friday-online-natural.png`, gerada com image_gen integrado; prompt exato em [docs/black-friday-online-natural-prompt.txt](docs/black-friday-online-natural-prompt.txt).
 
 ## Meta Pixel

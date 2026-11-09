@@ -8,12 +8,19 @@ const exact='<iframe src="https://bc-contentadmin.lovable.app/lista-espera" widt
 assert(html.includes(exact),'O iframe deve preservar todos os atributos fornecidos.');
 assert.equal((html.match(/<iframe\b/g)||[]).length,1);
 assert(!/<form\b/.test(html),'Não deve haver formulário independente.');
-const sections=['class="hero"','id="encontros"','class="testimonials"','id="sobre"','class="final-cta"'];
+const sections=['class="hero"','id="conteudo-evento"','id="encontros"','class="testimonials"','id="sobre"','class="final-cta"'];
 let last=-1;for(const marker of sections){const current=html.indexOf(marker);assert(current>last,marker);last=current;}
 const context={window:{}};vm.runInNewContext(readFileSync('dist/content.js','utf8'),context);
-const {events,testimonials}=context.window.BASTELLI_CONTENT;
-assert.equal(events.length,7);assert.equal(testimonials.length,11);
-assert.equal(events[0].date,'2026-10-22');
+const {upcoming,events,testimonials}=context.window.BASTELLI_CONTENT;
+assert.equal(events.length,8);assert.equal(testimonials.length,11);
+assert.equal(events[0].date,'2026-11-05');
+assert.equal(events[0].title,'O Lucro Invisível');
+assert.equal(events[0].videoUrl,null,'Não inventar registro do evento anterior.');
+assert.equal(upcoming.startsAt,'2026-11-18T14:00:00-03:00');
+assert(html.includes('datetime="'+upcoming.startsAt+'"'));
+for(const text of ['Léo Nicoletto','Bruno Bastelli','Rua Santa Cruz, 787','Sala 21 (2º andar)','Limeira/SP','Coffee break','networking','VAGAS LIMITADAS'])assert(html.includes(text),text);
+assert(!html.includes('O Lucro Invisível'),'O evento anterior deve aparecer só no histórico.');
+assert(!html.includes('Hamilton'),'O convidado anterior não deve estar na hero.');
 for(let i=1;i<events.length;i++)assert(events[i-1].date>events[i].date,'Ordem cronológica dos encontros.');
 for(const event of events)for(const key of ['thumbnail','videoUrl','pageUrl'])if(event[key]?.startsWith('./'))assert(existsSync(path.join(root,event[key])),event[key]);
 for(const video of testimonials){assert(existsSync(path.join(root,video.thumbnail)),video.thumbnail);if(video.videoUrl)assert(existsSync(path.join(root,video.videoUrl)),video.videoUrl);}

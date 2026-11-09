@@ -64,6 +64,7 @@
     const details = el('div','banner-content');
     details.append(el('span','event-tag','Finalizado'));
     const cover = event.pageUrl ? configureEventLink(createLink(event.pageUrl,'event-cover'),event) : el('div','event-cover');
+    if (event.coverClass) cover.classList.add(event.coverClass);
     if (event.pageUrl) cover.setAttribute('aria-label',`Veja como foi: ${event.title}`);
     if (event.thumbnail) {
       const img = el('img');

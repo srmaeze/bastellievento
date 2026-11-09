@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#131f2f">
-  <title>O Lucro Invisível | Encontros Bastelli</title>
-  <meta name="description" content="Para onde vai o dinheiro da sua loja online? Entre na lista de espera do próximo evento gratuito da Bastelli, em 5 de novembro de 2026.">
-  <meta property="og:title" content="O Lucro Invisível — Encontros Bastelli">
-  <meta property="og:description" content="Um encontro sobre a margem do seu e-commerce. 5 de novembro de 2026. Entre na lista de espera.">
+  <title>Gestão de tempo e vendas | Léo Nicoletto + Bruno Bastelli</title>
+  <meta name="description" content="Organize sua rotina, transforme seu atendimento e pare de perder vendas. Encontro gratuito com Léo Nicoletto e Bruno Bastelli em 18/11/2026, às 14h, em Limeira/SP.">
+  <meta property="og:title" content="Sua falta de tempo está custando quanto em resultado? | Bastelli + Resolve">
+  <meta property="og:description" content="18 de novembro, quarta-feira, às 14h. Gestão de tempo e processos comerciais com Léo Nicoletto e Bruno Bastelli. Gratuito, com coffee break e networking. Vagas limitadas.">
   <meta property="og:type" content="website">
   <link rel="preload" href="./assets/fonts/onest-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="./styles.css">
@@ -17,9 +17,10 @@
   <link rel="stylesheet" href="./centered-hero.css">
   <link rel="stylesheet" href="./event-dialog.css">
   <link rel="stylesheet" href="./countdown.css">
+  <link rel="stylesheet" href="./november-event.css">
   <script src="./content.js" defer></script>
-  <script src="./app.js?v=20261027-5" defer></script>
-  <script src="./countdown.mjs" type="module"></script>
+  <script src="./app.js?v=20261109-1" defer></script>
+  <script src="./countdown.mjs?v=20261109-1" type="module"></script>
   <script src="./meta-pixel.js" defer></script>
 </head>
 <body>
@@ -28,8 +29,8 @@
   <header class="site-header">
     <nav class="container nav" aria-label="Navegação principal">
       <a href="#conteudo" class="brand" aria-label="Bastelli, início"><img src="./assets/bastelli-logo.png" width="3417" height="392" alt="Bastelli"></a>
-      <div class="nav-links"><a href="#encontros">Nossos encontros</a><a href="#sobre">A Bastelli</a></div>
-      <a class="button nav-cta" href="#lista-espera">QUERO ENTRAR NA LISTA DE ESPERA <span aria-hidden="true">↗</span></a>
+      <div class="nav-links"><a href="#conteudo-evento">O encontro</a><a href="#encontros">Nossos encontros</a><a href="#sobre">A Bastelli</a></div>
+      <a class="button nav-cta" href="#lista-espera">QUERO PARTICIPAR <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
   <main id="conteudo">
@@ -37,13 +38,13 @@
       <div class="hero-visual">
       <div class="container hero-grid">
         <div class="hero-story">
-          <p class="eyebrow hero-eyebrow">EVENTO GRATUITO PARA EMPRESÁRIOS DE LIMEIRA E REGIÃO</p>
-          <p class="event-name">O Lucro Invisível</p>
-          <h1 id="hero-title">Para onde vai o dinheiro da sua <em>loja online?</em></h1>
-          <p class="hero-description">Entenda o que está consumindo a margem do seu e-commerce e quais decisões podem ajudar a fazer mais dinheiro sobrar.</p>
+          <p class="eyebrow hero-eyebrow">BASTELLI + RESOLVE · CONVITE EXCLUSIVO E GRATUITO</p>
+          <p class="event-name">Gestão de tempo e vendas</p>
+          <h1 id="hero-title">Sua falta de tempo está custando quanto em <em>resultado para sua empresa?</em></h1>
+          <p class="hero-description">Organize sua rotina, transforme seu atendimento e pare de perder vendas. Um encontro para empresários e gestores com Léo Nicoletto e Bruno Bastelli.</p>
           <div class="event-countdown" id="event-countdown" role="group" aria-labelledby="countdown-headline">
-            <div class="countdown-intro"><p class="countdown-kicker">PRÓXIMO ENCONTRO</p><p class="countdown-headline" id="countdown-headline">O encontro está chegando.</p><p class="countdown-caption" id="countdown-caption">Contagem até <time datetime="2026-11-05">5 de novembro</time></p></div>
-            <div class="countdown-clock" role="timer" aria-live="off" aria-label="Tempo restante até 5 de novembro" hidden>
+            <div class="countdown-intro"><p class="countdown-kicker">QUARTA-FEIRA · PRESENCIAL</p><p class="countdown-headline" id="countdown-headline">Faltam poucos dias.</p><p class="countdown-caption" id="countdown-caption"><time datetime="2026-11-18T14:00:00-03:00">18 de novembro de 2026 · às 14h</time></p></div>
+            <div class="countdown-clock" role="timer" aria-live="off" aria-label="Tempo restante até 18 de novembro de 2026, às 14h, horário de Brasília" hidden>
               <span class="countdown-summary" data-countdown-summary></span>
               <div class="countdown-unit" aria-hidden="true"><span class="countdown-number" data-countdown-unit="days">00</span><span class="countdown-unit-label">DIAS</span></div>
               <div class="countdown-unit" aria-hidden="true"><span class="countdown-number" data-countdown-unit="hours">00</span><span class="countdown-unit-label">HORAS</span></div>
@@ -56,11 +57,12 @@
       <div class="container registration-wrap">
         <aside class="waitlist hero-registration" id="lista-espera" tabindex="-1" aria-labelledby="waitlist-title">
           <div class="waitlist-copy">
-          <div class="waitlist-intro"><p class="eyebrow"><span class="small-line" aria-hidden="true"></span> LISTA DE ESPERA</p><h2 id="waitlist-title">O próximo encontro<br>começa por aqui.</h2><p>Cadastre-se na lista de espera do nosso próximo evento gratuito e receba os detalhes para participar.</p></div>
-          <div class="hero-event-meta"><div class="hero-date-cell"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18M7 15h3M14 15h3"/></svg><time datetime="2026-11-05"><span>5 de novembro</span> <span>de 2026</span></time></div><p class="hero-free-cell">Evento<br><strong>gratuito</strong></p></div>
-          <p class="hero-partnership">Com a Bastelli e Hamilton, da Prexus Contabilidade.</p>
-          <figure class="bruno-photo hero-portrait hero-speakers"><img src="./assets/hero-hamilton-bruno.png" width="672" height="412" alt="Hamilton Alves, da Prexus Contabilidade, e Bruno Bastelli, CEO da Bastelli" fetchpriority="high"></figure>
-          <p class="waitlist-note"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Você será avisado quando as inscrições abrirem.</p>
+          <div class="waitlist-intro"><p class="eyebrow"><span class="small-line" aria-hidden="true"></span> VAGAS LIMITADAS</p><h2 id="waitlist-title">Uma tarde para<br>mudar sua rotina.</h2><p>Preencha o cadastro para solicitar sua vaga. Nossa equipe entrará em contato pelo WhatsApp para confirmar sua participação.</p></div>
+          <div class="hero-event-meta"><div class="hero-date-cell"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18M7 15h3M14 15h3"/></svg><time datetime="2026-11-18T14:00:00-03:00"><span>18 de novembro</span><span>Quarta-feira · às 14h</span></time></div><p class="hero-free-cell">Evento<br><strong>gratuito</strong></p></div>
+          <div class="event-location"><p class="event-location-name">Escritório da Bastelli</p><address>Rua Santa Cruz, 787 · Sala 21 (2º andar)<br>Centro · Limeira/SP</address><a href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Santa+Cruz+787+Centro+Limeira+SP" target="_blank" rel="noopener noreferrer">Como chegar <span aria-hidden="true">↗</span></a></div>
+          <p class="event-hospitality">Coffee break e networking incluídos.</p>
+          <div class="registration-speakers"><span><strong>Léo Nicoletto</strong>Resolve</span><span><strong>Bruno Bastelli</strong>Bastelli Consultoria</span></div>
+          <p class="waitlist-note">Estamos reunindo um grupo exclusivo de empresários e gestores. Confirme sua participação apenas se realmente puder comparecer.</p>
           </div>
           <div class="iframe-wrap"><iframe src="https://bc-contentadmin.lovable.app/lista-espera" width="100%" height="640" style="border:0;max-width:520px;" title="Lista de espera" loading="lazy"></iframe></div>
         </aside>
@@ -68,9 +70,19 @@
       </div>
       <div class="container hero-footer"><span>CONVERSAS REAIS. DECISÕES MELHORES.</span><a href="#encontros">Conheça os encontros Bastelli <span aria-hidden="true">↓</span></a></div>
     </section>
+    <section class="event-program" id="conteudo-evento" aria-labelledby="program-title">
+      <div class="container">
+        <div class="program-heading"><div><p class="eyebrow"><span class="small-line" aria-hidden="true"></span> DOIS TEMAS QUE SE CONECTAM</p><h2 id="program-title">Mais controle da rotina.<br><em>Mais oportunidades aproveitadas.</em></h2></div><p>O dia termina e ainda ficou muita coisa por fazer? Clientes esperando respostas e follow-ups adiados podem custar vendas. Vamos conversar sobre como mudar esse cenário.</p></div>
+        <div class="speaker-grid">
+          <article class="speaker-card"><header class="speaker-header"><img src="./assets/leo-nicoletto.jpg" width="150" height="150" alt="Léo Nicoletto" loading="lazy"><div><p class="speaker-company">RESOLVE</p><h3>Léo Nicoletto</h3><a class="speaker-profile" href="https://www.instagram.com/leonicoletto/" target="_blank" rel="noopener noreferrer">@leonicoletto <span aria-hidden="true">↗</span></a></div></header><div class="speaker-topic"><p class="topic-number">01 / GESTÃO DE TEMPO</p><h4>Sua agenda a favor<br>do seu resultado.</h4><p>Como sua mentalidade, postura e posicionamento podem ajudar a organizar a agenda, ter mais controle da rotina e cumprir o que realmente importa.</p></div></article>
+          <article class="speaker-card"><header class="speaker-header"><img src="./assets/bruno-palestra.webp" width="1300" height="1865" alt="Bruno Bastelli" loading="lazy"><div><p class="speaker-company">BASTELLI CONSULTORIA</p><h3>Bruno Bastelli</h3><p class="speaker-role">Atendimento e processos comerciais</p></div></header><div class="speaker-topic"><p class="topic-number">02 / MUITO ALÉM DO CLIQUE</p><h4>De leads a<br>clientes fiéis.</h4><p>Como organizar o atendimento e estruturar processos comerciais para aproveitar as oportunidades que chegam pelo WhatsApp, sem perder vendas por falta de acompanhamento.</p></div></article>
+        </div>
+        <div class="program-footer"><p>Conteúdo, troca de experiências e conexões para levar para a sua empresa.</p><a class="text-link" href="#lista-espera">QUERO PARTICIPAR <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
     <section class="events section-light" id="encontros" aria-labelledby="events-title">
       <div class="container">
-        <div class="section-intro"><div><p class="eyebrow"><span class="small-line" aria-hidden="true"></span> ENCONTROS BASTELLI</p><h2 id="events-title">Cada encontro,<br>um novo tema para<br><em>o seu negócio.</em></h2></div><p class="section-description">Crescimento, vendas, marca e Black Friday já fizeram parte das nossas conversas. Agora, o próximo encontro é sobre o lucro da sua loja online. Conheça os eventos que já realizamos.</p></div>
+        <div class="section-intro"><div><p class="eyebrow"><span class="small-line" aria-hidden="true"></span> ENCONTROS JÁ REALIZADOS</p><h2 id="events-title">Cada encontro,<br>um novo tema para<br><em>o seu negócio.</em></h2></div><p class="section-description">Lucro, crescimento, vendas, marca e Black Friday já fizeram parte das nossas conversas. Conheça os encontros que já realizamos e os registros de quem esteve com a gente.</p></div>
         <div class="events-grid" id="events-grid"></div>
       </div>
     </section>
@@ -85,10 +97,10 @@
       <div class="container about-grid">
         <p class="eyebrow about-label"><span class="small-line" aria-hidden="true"></span> QUEM É A BASTELLI</p>
         <figure class="team-photo"><img src="./assets/equipe-bastelli-marca.jpg" width="1701" height="1704" alt="Participantes reunidos na Bastelli em foto com a identidade da marca" loading="lazy"><figcaption>ESTRATÉGIA SE CONSTRÓI DE PERTO.</figcaption></figure>
-        <div class="about-copy"><h2 id="about-title">Especialistas em e-commerce, <em>próximos do seu negócio.</em></h2><p>A Bastelli é uma consultoria especializada em e-commerce. Trabalhamos ao lado dos lojistas, conectando planejamento, marketing e operação para identificar oportunidades e melhorar os resultados de cada negócio.</p><p>Nos nossos encontros, compartilhamos essa experiência com empresários de Limeira e região.</p><a class="text-link" href="#lista-espera">QUERO ENTRAR NA LISTA DE ESPERA <span aria-hidden="true">↗</span></a></div>
+        <div class="about-copy"><h2 id="about-title">Especialistas em e-commerce, <em>próximos do seu negócio.</em></h2><p>A Bastelli é uma consultoria especializada em e-commerce. Trabalhamos ao lado dos lojistas, conectando planejamento, marketing e operação para identificar oportunidades e melhorar os resultados de cada negócio.</p><p>Nos nossos encontros, compartilhamos essa experiência com empresários de Limeira e região.</p><a class="text-link" href="#lista-espera">QUERO PARTICIPAR <span aria-hidden="true">↗</span></a></div>
       </div>
     </section>
-    <section class="final-cta" aria-labelledby="final-title"><div class="container final-grid"><div><p class="eyebrow">05 NOVEMBRO 2026 · EVENTO GRATUITO</p><h2 id="final-title">Seu próximo encontro com a Bastelli já tem tema: <em>o lucro da sua loja.</em></h2></div><div><p>Entre na lista de espera do evento gratuito O Lucro Invisível e seja avisado quando as inscrições abrirem.</p><a class="button" href="#lista-espera">QUERO ENTRAR NA LISTA DE ESPERA <span aria-hidden="true">↗</span></a></div></div></section>
+    <section class="final-cta" aria-labelledby="final-title"><div class="container final-grid"><div><p class="eyebrow">18 NOVEMBRO 2026 · QUARTA-FEIRA · 14H</p><h2 id="final-title">Está na hora de abrir espaço<br><em>para o que traz resultado.</em></h2></div><div><p>Encontro gratuito no escritório da Bastelli, com Léo Nicoletto e Bruno Bastelli, coffee break e networking. Vagas limitadas para empresários e gestores.</p><a class="button" href="#lista-espera">QUERO PARTICIPAR <span aria-hidden="true">↗</span></a></div></div></section>
   </main>
   <dialog class="event-dialog" id="event-dialog" aria-labelledby="event-dialog-title" aria-describedby="event-dialog-meta">
     <div class="event-dialog-header"><div><p class="eyebrow">ENCONTROS BASTELLI</p><h2 id="event-dialog-title"></h2><p id="event-dialog-meta" class="event-dialog-meta"></p></div><button type="button" class="event-dialog-close" aria-label="Fechar vídeo" autofocus><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>

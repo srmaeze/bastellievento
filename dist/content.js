@@ -1,7 +1,9 @@
 // Dados editoriais centralizados. null = material ainda não localizado/fornecido.
 // pageUrl aponta só para destinos reais; capas geradas têm identificação ilustrativa.
 window.BASTELLI_CONTENT = {
+  upcoming: {title:'Gestão de tempo e vendas',date:'2026-11-18',startsAt:'2026-11-18T14:00:00-03:00',displayDate:'18 de novembro de 2026 · às 14h',location:'Escritório da Bastelli · Limeira/SP'},
   events: [
+    {title:'O Lucro Invisível',date:'2026-11-05',displayDate:'05 NOV 2026',extra:'Com Hamilton Alves, da Prexus Contabilidade, e Bruno Bastelli.',pageUrl:null,thumbnail:'./assets/hero-hamilton-bruno.png',thumbnailAlt:'Arte do encontro O Lucro Invisível, com Hamilton Alves e Bruno Bastelli.',coverClass:'event-cover--lucro-invisivel',videoUrl:null},
     {title:'Encontro com a Descomplica',date:'2026-10-22',displayDate:'22 OUT 2026',extra:null,pageUrl:'./eventos/descomplica.html',thumbnail:'./assets/event-descomplica-cover.png',videoUrl:'./assets/event-descomplica.mp4'},
     {title:'BW Talks',date:'2026-10-06',displayDate:'06 OUT 2026',extra:null,pageUrl:'./eventos/bw-talks.html',thumbnail:'./assets/event-bw-talks-cover.png',videoUrl:'./assets/event-bw-talks.mp4'},
     {title:'Treinamento Black Friday Presencial',date:'2026-09-24',displayDate:'24 SET 2026',extra:'Com o time Bastelli.',pageUrl:'./eventos/black-friday-presencial.html',thumbnail:'./assets/event-black-friday-presencial.jpg',videoUrl:'./assets/event-black-friday-presencial.mp4'},
