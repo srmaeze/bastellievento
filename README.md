@@ -30,6 +30,8 @@ O atributo HTML `height="640"` foi preservado. A altura exibida é ajustada por 
 - Capas Descomplica, Apêbrands, BW Talks, Infinita e Transforma: imagens enviadas pelo usuário, copiadas sem alteração.
 - O Lucro Invisível (05/11/2026): movido para o primeiro card do histórico, identificado como finalizado. Usa a arte anterior com Hamilton Alves e Bruno Bastelli; nenhum vídeo novo foi fornecido, portanto não há CTA de gravação.
 - Léo Nicoletto: miniatura real do perfil público indicado pelo usuário, `https://www.instagram.com/leonicoletto/`, copiada sem alteração em `dist/assets/leo-nicoletto.jpg` (150×150). A foto pequena é usada apenas para identificar o palestrante. Bruno usa a foto real já existente.
+- Hero: composição original preservada, com arte conjunta dos palestrantes no lado laranja do cadastro. Imagem fornecida pelo usuário, restaurada com image_gen integrado em `dist/assets/hero-leo-bruno-restaurada.png` (1622×970); [prompt exato](docs/hero-speakers-restoration-prompt.txt).
+- Favicon: símbolo vetorial oficial da Bastelli, com enquadramento quadrado e contraste branco sobre azul escuro, em `dist/favicon.svg`. Referenciado na página inicial e nas seis páginas de registros; o gerador mantém a referência nas próximas atualizações.
 - Nova capa Black Friday Online: `dist/assets/event-black-friday-online-natural.png`, gerada com image_gen integrado; prompt exato em [docs/black-friday-online-natural-prompt.txt](docs/black-friday-online-natural-prompt.txt).
 
 ## Meta Pixel

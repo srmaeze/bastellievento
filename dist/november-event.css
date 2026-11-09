@@ -2,8 +2,8 @@
 .hero h1{max-width:1020px;font-size:clamp(38px,4.05vw,56px)}
 .hero .hero-description{max-width:740px}
 .hero .hero-grid{max-width:1100px}
-.registration-event-art{position:relative;aspect-ratio:1080/560;width:100%;overflow:hidden;border-radius:13px;margin-top:18px;background:var(--navy)}
-.registration-event-art img{display:block;position:absolute;top:0;left:0;width:100%;height:auto;max-width:none;transform:translateY(-39.63%)}
+.registration-event-art{position:relative;aspect-ratio:1622/970;width:100%;overflow:hidden;border-radius:13px;margin-top:18px;background:var(--navy)}
+.registration-event-art img{display:block;width:100%;height:auto}
 .registration-context{display:flex;align-items:center;justify-content:space-between;gap:35px;max-width:1080px;margin:24px auto 0;padding-top:22px;border-top:1px solid #ffffff24;color:#e4ebf4}
 .registration-context .event-location{font-size:11px;line-height:1.7}
 .registration-context .event-location address{color:#b7c5d6}

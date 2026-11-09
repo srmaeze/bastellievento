@@ -1,0 +1,9 @@
+Mode: image_gen built-in edit; no CLI/API fallback.
+Input: user's supplied cropped speaker banner, unchanged original.
+
+Use case: identity-preserve.
+Asset type: real event-speaker banner for a Bastelli website.
+Input image: the attached local PNG is the ONLY edit target.
+Primary request: improve the technical image quality and clarity of this exact existing composition. Apply conservative high-quality restoration and upscaling to approximately 1712x1008 while maintaining the original 570:337 aspect ratio as closely as possible. Reduce compression artifacts and pixelation, improve edge clarity and natural microcontrast modestly. Keep the same overall dark blue/orange grainy background and grid.
+Invariants: preserve the EXACT identities and facial likenesses of BOTH real people. Preserve Leo's smile, teeth, black glasses, hair, black blazer and hand position; preserve Bruno's head, beard, expression, microphone, black clothing and pose. Preserve the original framing, relative scale, overlap, layout and all objects. Do not redesign, beautify, reshape, relight dramatically, add skin detail that changes identity, or make skin plastic. Keep all existing noise/light texture restrained and natural.
+Text must remain exactly and fully legible in the same positions with the same orange rules: left 'Leo Nicoletto' / 'Resolve Consultoria' / 'Estratégica e Growth'; right 'Bruno Bastelli' / 'CEO Bastelli'. Do not add or remove any text, logos, borders, people or objects. This is a subtle quality improvement of the supplied image, not a reimagining. Opaque background.
